@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ShyjGlXj2OETSLfjGaiBnAd4fgecKyW1dkxLp1ZKpro=",
+  "Hash": "jFVZE8W4LlrCb6BMh2AWq/bjqbrCjWNwjrhJuLmrNiQ=",
   "Source": "BookwormOnline",
   "BasePath": "_content/BookwormOnline",
   "Mode": "Default",
@@ -1340,6 +1340,48 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/0e505095-b1f9-470c-ad4e-143ea2e25eb4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/3990c987-4913-421e-bd35-8d7fe8c7bd7b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg"
+    },
+    {
       "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\58d2ffc0-cc3c-4910-bb6a-f50fceb96168.jpg",
       "SourceId": "BookwormOnline",
       "SourceType": "Discovered",
@@ -1382,6 +1424,90 @@
       "OriginalItemSpec": "wwwroot\\uploads\\5970c4c7-1cf4-41fd-8b7e-633de5311531.jpg"
     },
     {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/687f0504-f7e0-4990-a5c5-2f11fb4c2b2b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/690bb5ef-eb50-471a-90d2-78625f5cdb45#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\6e769ed9-213d-4939-9362-8650ca818151.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/6e769ed9-213d-4939-9362-8650ca818151#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\6e769ed9-213d-4939-9362-8650ca818151.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/b380b56f-eb88-4a0c-ad9e-427d8ca1e08a#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg"
+    },
+    {
       "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\c48bf7b2-f316-4350-b1e8-2a8033c1c540.jpg",
       "SourceId": "BookwormOnline",
       "SourceType": "Discovered",
@@ -1401,6 +1527,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\c48bf7b2-f316-4350-b1e8-2a8033c1c540.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\ce13d13f-c48c-452d-92d0-700c24015146.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/ce13d13f-c48c-452d-92d0-700c24015146#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ce13d13f-c48c-452d-92d0-700c24015146.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\f42223cb-fa03-47fb-a159-933b5929993f.jpg",
+      "SourceId": "BookwormOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
+      "BasePath": "_content/BookwormOnline",
+      "RelativePath": "uploads/f42223cb-fa03-47fb-a159-933b5929993f#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ituiggjahp",
+      "Integrity": "hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\f42223cb-fa03-47fb-a159-933b5929993f.jpg"
     },
     {
       "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\f77f8d6b-255d-4142-bc01-a8db98a2f442.jpg",
@@ -1469,7 +1637,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 15:09:36 GMT"
+          "Value": "Mon, 10 Feb 2025 11:21:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1506,7 +1674,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 15:09:36 GMT"
+          "Value": "Mon, 10 Feb 2025 11:21:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1551,7 +1719,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 15:09:36 GMT"
+          "Value": "Mon, 10 Feb 2025 11:21:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1596,7 +1764,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 15:09:36 GMT"
+          "Value": "Mon, 10 Feb 2025 11:21:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6613,6 +6781,170 @@
       ]
     },
     {
+      "Route": "uploads/0e505095-b1f9-470c-ad4e-143ea2e25eb4.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 15:01:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 15:01:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3990c987-4913-421e-bd35-8d7fe8c7bd7b.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:08:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:08:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
       "Route": "uploads/58d2ffc0-cc3c-4910-bb6a-f50fceb96168.ituiggjahp.jpg",
       "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\58d2ffc0-cc3c-4910-bb6a-f50fceb96168.jpg",
       "Selectors": [],
@@ -6777,6 +7109,334 @@
       ]
     },
     {
+      "Route": "uploads/687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 12:19:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 12:19:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/690bb5ef-eb50-471a-90d2-78625f5cdb45.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:06:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:06:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6e769ed9-213d-4939-9362-8650ca818151.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\6e769ed9-213d-4939-9362-8650ca818151.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:05:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/6e769ed9-213d-4939-9362-8650ca818151.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6e769ed9-213d-4939-9362-8650ca818151.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\6e769ed9-213d-4939-9362-8650ca818151.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:05:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:26:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:26:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
       "Route": "uploads/c48bf7b2-f316-4350-b1e8-2a8033c1c540.ituiggjahp.jpg",
       "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\c48bf7b2-f316-4350-b1e8-2a8033c1c540.jpg",
       "Selectors": [],
@@ -6845,6 +7505,170 @@
         {
           "Name": "Last-Modified",
           "Value": "Sun, 09 Feb 2025 08:53:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ce13d13f-c48c-452d-92d0-700c24015146.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\ce13d13f-c48c-452d-92d0-700c24015146.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 05:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ce13d13f-c48c-452d-92d0-700c24015146.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ce13d13f-c48c-452d-92d0-700c24015146.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\ce13d13f-c48c-452d-92d0-700c24015146.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 05:28:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f42223cb-fa03-47fb-a159-933b5929993f.ituiggjahp.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\f42223cb-fa03-47fb-a159-933b5929993f.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:06:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ituiggjahp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/f42223cb-fa03-47fb-a159-933b5929993f.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f42223cb-fa03-47fb-a159-933b5929993f.jpg",
+      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\uploads\\f42223cb-fa03-47fb-a159-933b5929993f.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "952166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 08:06:09 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -4,7 +4,7 @@
 }
 
 <head>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfKG9EqAAAAABD8cRZyqNwV2N2rHa6lk1Uqvf6c"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render="></script>
 </head>
 <body>
     <div class="container mt-5">
@@ -20,19 +20,24 @@
                     <!-- Email -->
                     <div class="mb-3">
                         <label class="form-label" asp-for="LModel.Email">Email Address</label>
-                        <input type="email" asp-for="LModel.Email" class="form-control" value="jeraldliu06@gmail.com" required />
+                        <input type="email" asp-for="LModel.Email" class="form-control" required />
                         <span asp-validation-for="LModel.Email" class="text-danger"></span>
                     </div>
 
                     <!-- Password -->
                     <div class="mb-3">
                         <label class="form-label" asp-for="LModel.Password">Password</label>
-                        <input type="password" asp-for="LModel.Password" class="form-control" value="P@ssw0rd1234" required />
+                        <input type="password" asp-for="LModel.Password" class="form-control" required />
                         <span asp-validation-for="LModel.Password" class="text-danger"></span>
                     </div>
 
                     <!-- Hidden input for reCAPTCHA token -->
                     <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+                    <!-- Forgot Password Link -->
+                    <div class="mb-3">
+                        <a asp-page="/ForgetPassword" class="btn btn-link">Forgot Password?</a>
+                    </div>
 
                     <!-- Submit Button -->
                     <div class="mb-3">
@@ -40,12 +45,13 @@
                     </div>
                 </form>
             </div>
+
         </div>
     </div>
 
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('6LfKG9EqAAAAABD8cRZyqNwV2N2rHa6lk1Uqvf6c', { action: 'login' }).then(function (token) {
+            grecaptcha.execute('', { action: 'login' }).then(function (token) {
                 document.getElementById("g-recaptcha-response").value = token;
             });
         });

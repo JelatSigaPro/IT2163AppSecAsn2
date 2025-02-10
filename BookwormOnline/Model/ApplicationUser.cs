@@ -27,6 +27,14 @@ namespace BookwormOnline.Model
         [Required]
         public string PasswordHash { get; set; }
 
+        [Required]
+        public string PasswordSalt { get; set; }
+
+        public string PreviousPasswordHash1 { get; set; }
+
+        public string PreviousPasswordHash2 { get; set; }
+        public DateTime? LastPasswordChangeDate { get; set; } // ✅ Tracks last password change
         public string SessionToken { get; set; } // Unique session identifier
+        public bool Is2FAEnabled { get; set; } = false;  // Indicates if the user has 2FA enabled
     }
 }

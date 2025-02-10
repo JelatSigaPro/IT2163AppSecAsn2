@@ -1,4 +1,5 @@
 using BookwormOnline.Model;
+using BookwormOnline.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ builder.Services.AddRazorPages()
 {
     options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()); // ? Enforce CSRF Protection Globally
 }); ;
+builder.Services.AddScoped<IEmailSender, EmailSender>(); // ? Register Email Service
 builder.Services.AddDbContext<AuthDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnectionString")));
 
@@ -51,6 +53,14 @@ app.UseStatusCodePages(async context =>
     else if (response.StatusCode == 403)
     {
         response.Redirect("/error/403"); // Handles access denied errors
+    }
+    else if (response.StatusCode == 400)
+    {
+        response.Redirect("/error/400"); // Handles access denied errors
+    }
+    else
+    {
+        response.Redirect("/error/500"); // Handles all other errors
     }
 });
 

@@ -1,0 +1,15 @@
+﻿@page
+@model BookwormOnline.Pages.Enable2FAModel
+@{
+    ViewData["Title"] = "Enable Two-Factor Authentication";
+}
+
+<div class="container mt-5">
+    <h2>Enable Two-Factor Authentication</h2>
+    <p>Secure your account with 2FA authentication.</p>
+
+    <form method="post">
+        <button type="submit" asp-page-handler="Enable2FA" class="btn btn-success">Enable 2FA</button>
+        <button type="submit" asp-page-handler="Disable2FA" class="btn btn-danger">Disable 2FA</button>
+    </form>
+</div>

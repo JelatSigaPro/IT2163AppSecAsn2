@@ -1,0 +1,24 @@
+﻿@page
+@model BookwormOnline.Pages.Verify2FAModel
+@{
+    ViewData["Title"] = "Verify Two-Factor Authentication";
+}
+
+<div class="container mt-5">
+    <h2>Two-Factor Authentication</h2>
+    <p>We sent a verification code to your registered email. Please enter the code below.</p>
+
+    <form method="post">
+        @Html.AntiForgeryToken()
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label class="form-label" asp-for="VModel.Code">Authentication Code</label>
+            <input type="text" asp-for="VModel.Code" class="form-control" required />
+            <span asp-validation-for="VModel.Code" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Verify</button>
+    </form>
+</div>

@@ -52,7 +52,7 @@ namespace BookwormOnline.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred during logout.");
-                return RedirectToPage("/Errors/500");
+                return RedirectToPage("/Error/500");
             }
         }
     }

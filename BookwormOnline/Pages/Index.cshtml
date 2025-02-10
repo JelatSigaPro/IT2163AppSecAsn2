@@ -21,4 +21,11 @@
             <img src="@Model.CurrentUser.PhotoPath" alt="Profile Picture" class="img-thumbnail" width="150" />
         </div>
     </div>
+    <!-- Change Password Button -->
+    <div class="mt-3">
+        <a asp-page="/ChangePassword" class="btn btn-warning">Change Password</a>
+    </div>
+    <div class="mt-3">
+        <a asp-page="/Enable2FA" class="btn btn-success">2FA Options</a>
+    </div>
 </div>

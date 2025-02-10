@@ -48,6 +48,17 @@ namespace BookwormOnline.Pages
                     return RedirectToPage("/Login");
                 }
 
+                //Password Expiry Check
+                if (user.LastPasswordChangeDate.HasValue)
+                {
+                    var passwordAge = DateTime.UtcNow - user.LastPasswordChangeDate.Value;
+                    if (passwordAge > TimeSpan.FromDays(90))
+                    {
+                        _logger.LogWarning("User {Email} must change password due to max age policy.", user.Email);
+                        return RedirectToPage("/ChangePassword", new { forceChange = true });
+                    }
+                }
+
                 Console.WriteLine($"User: {user.PhotoPath}");
                 _logger.LogInformation($"User {user.Email} accessed Index page.");
 

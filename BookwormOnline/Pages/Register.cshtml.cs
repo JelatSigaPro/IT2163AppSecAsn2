@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BookwormOnline.Model;
 using System.Net;
+using System.Data.SqlTypes;
 
 namespace BookwormOnline.Pages
 {
@@ -50,7 +51,7 @@ namespace BookwormOnline.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while checking existing users.");
-                RedirectToPage("/Errors/500");
+                RedirectToPage("/Error/500");
             }
         }
 
@@ -114,7 +115,8 @@ namespace BookwormOnline.Pages
                 string encodedBillingAddress = EncodeInput(RModel.BillingAddress);
                 string encodedShippingAddress = EncodeInput(RModel.ShippingAddress);
 
-                string hashedPassword = HashPassword(RModel.Password);
+                // Generate salt and hash password
+                GenerateSaltAndHash(RModel.Password, out string hashedPassword, out string salt);
                 string encryptedCreditCard = EncryptData(RModel.CreditCardNo);
                 string sessionToken = GenerateSessionToken();
 
@@ -128,10 +130,15 @@ namespace BookwormOnline.Pages
                     ShippingAddress = encodedShippingAddress,
                     Email = EncodeInput(RModel.Email),
                     UserName = EncodeInput(RModel.Email),
-                    PhotoPath = photoPath,
-                    PasswordHash = hashedPassword,
+                    PhotoPath = photoPath ?? null,
+                    PasswordHash = hashedPassword, //Store hashed password
+                    PasswordSalt = salt,           // Store generated salt
+                    PreviousPasswordHash1 = hashedPassword, // ? Set to null on new registration
+                    PreviousPasswordHash2 = "", // ? Set to null on new registration
+                    LastPasswordChangeDate = DateTime.UtcNow,
                     SessionToken = sessionToken
                 };
+
 
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
@@ -152,7 +159,7 @@ namespace BookwormOnline.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred during user registration.");
-                return RedirectToPage("/Errors/500");
+                return RedirectToPage("/Error/500");
             }
         }
 
@@ -174,21 +181,27 @@ namespace BookwormOnline.Pages
             }
         }
 
-        private string HashPassword(string password)
+        private void GenerateSaltAndHash(string password, out string finalHash, out string salt)
         {
             try
             {
-                using (SHA512 sha512 = SHA512.Create())
-                {
-                    byte[] inputBytes = Encoding.UTF8.GetBytes(password);
-                    byte[] hashedBytes = sha512.ComputeHash(inputBytes);
-                    return Convert.ToBase64String(hashedBytes);
-                }
+                // Generate a random salt
+                RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+                byte[] saltByte = new byte[8]; // 8-byte salt
+                rng.GetBytes(saltByte);
+                salt = Convert.ToBase64String(saltByte);
+
+                // Hash password + salt
+                SHA512Managed hashing = new SHA512Managed();
+                string pwdWithSalt = password + salt; // Concatenate password with salt
+                byte[] hashWithSalt = hashing.ComputeHash(Encoding.UTF8.GetBytes(pwdWithSalt));
+                finalHash = Convert.ToBase64String(hashWithSalt);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error hashing password.");
-                return "HashError";
+                _logger.LogError(ex, "Error generating salt and hashing password.");
+                finalHash = "HashError";
+                salt = "SaltError";
             }
         }
 

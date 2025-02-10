@@ -70,7 +70,7 @@ namespace BookwormOnline.Pages
                     return Page();
                 }
 
-                string enteredPasswordHash = HashPassword(LModel.Password);
+                string enteredPasswordHash = HashPasswordWithSalt(LModel.Password, user.PasswordSalt);
                 if (enteredPasswordHash != user.PasswordHash)
                 {
                     await _userManager.AccessFailedAsync(user);
@@ -111,14 +111,29 @@ namespace BookwormOnline.Pages
                 HttpContext.Session.SetString("SessionToken", newSessionToken);
 
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                _logger.LogInformation("User {Email} logged in successfully.", user.Email);
+                _logger.LogInformation("User logged in successfully.");
+
+                if (user.LastPasswordChangeDate.HasValue)
+                {
+                    var passwordAge = DateTime.UtcNow - user.LastPasswordChangeDate.Value;
+                    if (passwordAge > TimeSpan.FromDays(90))
+                    {
+                        _logger.LogWarning("User {Email} must change password due to max age policy.", user.Email);
+                        return RedirectToPage("/ChangePassword", new { forceChange = true }); // Redirect to Change Password
+                    }
+                }
+
+                if (user.Is2FAEnabled)
+                {
+                    return RedirectToPage("/Verify2FA");
+                }
 
                 return RedirectToPage("Index");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected error during login for {Email}", LModel.Email);
-                return RedirectToPage("/Errors/500");
+                return RedirectToPage("/Error/500");
             }
         }
 
@@ -127,7 +142,7 @@ namespace BookwormOnline.Pages
         {
             using (var httpClient = new HttpClient())
             {
-                var response = await httpClient.PostAsync($"https://www.google.com/recaptcha/api/siteverify?secret=6LfKG9EqAAAAAOAP8hiLKyk3zTOVsYfIAuyiikzs&response={token}", null);
+                var response = await httpClient.PostAsync($"https://www.google.com/recaptcha/api/siteverify?secret=&response={token}", null);
                 var jsonResponse = await response.Content.ReadAsStringAsync();
 
                 Console.WriteLine("reCAPTCHA Response: " + jsonResponse); // Debugging
@@ -158,21 +173,20 @@ namespace BookwormOnline.Pages
 
 
 
-        // SHA-512 Hashing (Same as Registration)
-        private string HashPassword(string password)
+        private string HashPasswordWithSalt(string password, string salt)
         {
             try
             {
-                using (SHA512 sha512 = SHA512.Create())
+                using (SHA512Managed hashing = new SHA512Managed())
                 {
-                    byte[] inputBytes = Encoding.UTF8.GetBytes(password);
-                    byte[] hashedBytes = sha512.ComputeHash(inputBytes);
-                    return Convert.ToBase64String(hashedBytes);
+                    string pwdWithSalt = password + salt;
+                    byte[] hashWithSalt = hashing.ComputeHash(Encoding.UTF8.GetBytes(pwdWithSalt));
+                    return Convert.ToBase64String(hashWithSalt);
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error hashing password.");
+                _logger.LogError(ex, "Error hashing password with salt.");
                 return "HashError";
             }
         }

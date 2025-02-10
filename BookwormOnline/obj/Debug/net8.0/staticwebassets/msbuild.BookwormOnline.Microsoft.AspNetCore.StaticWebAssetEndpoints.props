@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BookwormOnline.s6o9uhlcuz.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tPRNv\u002BNBGOML7F2GZ5xDE8jIuIad5NS/8BqheqRE6sA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tPRNv\u002BNBGOML7F2GZ5xDE8jIuIad5NS/8BqheqRE6sA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 15:09:36 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tPRNv\u002BNBGOML7F2GZ5xDE8jIuIad5NS/8BqheqRE6sA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 11:21:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BookwormOnline/BookwormOnline.s6o9uhlcuz.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BookwormOnline.s6o9uhlcuz.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"s6o9uhlcuz"},{"Name":"integrity","Value":"sha256-tPRNv\u002BNBGOML7F2GZ5xDE8jIuIad5NS/8BqheqRE6sA="},{"Name":"label","Value":"_content/BookwormOnline/BookwormOnline.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tPRNv\u002BNBGOML7F2GZ5xDE8jIuIad5NS/8BqheqRE6sA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 15:09:36 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tPRNv\u002BNBGOML7F2GZ5xDE8jIuIad5NS/8BqheqRE6sA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 11:21:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BookwormOnline/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
@@ -744,6 +744,30 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1117"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 08 Feb 2025 12:54:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/0e505095-b1f9-470c-ad4e-143ea2e25eb4.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 15:01:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 15:01:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/3990c987-4913-421e-bd35-8d7fe8c7bd7b.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:08:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:08:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/58d2ffc0-cc3c-4910-bb6a-f50fceb96168.ituiggjahp.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\58d2ffc0-cc3c-4910-bb6a-f50fceb96168.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -768,6 +792,54 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 04:05:56 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 12:19:10 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\687f0504-f7e0-4990-a5c5-2f11fb4c2b2b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 12:19:10 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/690bb5ef-eb50-471a-90d2-78625f5cdb45.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:06:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\690bb5ef-eb50-471a-90d2-78625f5cdb45.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:06:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/6e769ed9-213d-4939-9362-8650ca818151.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\6e769ed9-213d-4939-9362-8650ca818151.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/6e769ed9-213d-4939-9362-8650ca818151.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:05:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/6e769ed9-213d-4939-9362-8650ca818151.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\6e769ed9-213d-4939-9362-8650ca818151.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:05:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:26:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:26:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/c48bf7b2-f316-4350-b1e8-2a8033c1c540.ituiggjahp.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c48bf7b2-f316-4350-b1e8-2a8033c1c540.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -779,6 +851,30 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 08:53:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/ce13d13f-c48c-452d-92d0-700c24015146.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ce13d13f-c48c-452d-92d0-700c24015146.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/ce13d13f-c48c-452d-92d0-700c24015146.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 05:28:10 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/ce13d13f-c48c-452d-92d0-700c24015146.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ce13d13f-c48c-452d-92d0-700c24015146.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 05:28:10 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/f42223cb-fa03-47fb-a159-933b5929993f.ituiggjahp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f42223cb-fa03-47fb-a159-933b5929993f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ituiggjahp"},{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="},{"Name":"label","Value":"_content/BookwormOnline/uploads/f42223cb-fa03-47fb-a159-933b5929993f.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:06:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/f42223cb-fa03-47fb-a159-933b5929993f.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f42223cb-fa03-47fb-a159-933b5929993f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"952166"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 08:06:09 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BookwormOnline/uploads/f77f8d6b-255d-4142-bc01-a8db98a2f442.ituiggjahp.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f77f8d6b-255d-4142-bc01-a8db98a2f442.jpg'))</AssetFile>

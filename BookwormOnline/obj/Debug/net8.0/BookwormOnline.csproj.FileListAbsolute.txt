@@ -151,3 +151,8 @@ C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\obj\Debu
 C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\obj\Debug\net8.0\BookwormOnline.genruntimeconfig.cache
 C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\obj\Debug\net8.0\ref\BookwormOnline.dll
 C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\obj\Debug\net8.0\BookwormOnline.sourcelink.json
+C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\bin\Debug\net8.0\MailKit.dll
+C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\bin\Debug\net8.0\MimeKit.dll
+C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\samli_gupj\OneDrive\Documents\AS\BookwormOnline\BookwormOnline\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
