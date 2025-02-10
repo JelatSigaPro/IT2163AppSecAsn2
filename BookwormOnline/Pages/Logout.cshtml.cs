@@ -5,9 +5,11 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 using BookwormOnline.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookwormOnline.Pages
 {
+    [Authorize(Roles = "Admin,User")]
     public class LogoutModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
@@ -29,6 +31,7 @@ namespace BookwormOnline.Pages
 
                 if (!string.IsNullOrEmpty(userEmail))
                 {
+                    // Log the logout action
                     _db.AuditLogs.Add(new AuditLog
                     {
                         UserEmail = userEmail,
@@ -37,7 +40,7 @@ namespace BookwormOnline.Pages
                     });
 
                     await _db.SaveChangesAsync();
-                    _logger.LogInformation($"User logged out successfully.");
+                    _logger.LogInformation("User {Email} logged out successfully.", userEmail);
                 }
                 else
                 {

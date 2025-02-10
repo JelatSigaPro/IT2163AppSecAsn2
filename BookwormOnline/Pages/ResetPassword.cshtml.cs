@@ -16,12 +16,14 @@ namespace BookwormOnline.Pages
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly AuthDbContext _db;
         private readonly ILogger<ResetPasswordModel> _logger;
 
-        public ResetPasswordModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ILogger<ResetPasswordModel> logger)
+        public ResetPasswordModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AuthDbContext db, ILogger<ResetPasswordModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _db = db;
             _logger = logger;
         }
 
@@ -31,7 +33,7 @@ namespace BookwormOnline.Pages
         public void OnGet(string token, string email)
         {
             RModel.Email = email;
-            RModel.Token = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token)); // ? Decode properly
+            RModel.Token = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token)); // Decode properly
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -63,6 +65,16 @@ namespace BookwormOnline.Pages
                 {
                     ModelState.AddModelError("", "You cannot reuse your last two passwords. Please choose a different password.");
                     _logger.LogWarning("Password reset failed: User {Email} attempted to reuse an old password.", user.Email);
+
+                    // Log failed password reset attempt
+                    _db.AuditLogs.Add(new AuditLog
+                    {
+                        UserEmail = user.Email,
+                        Action = "Failed Password Reset Attempt",
+                        Timestamp = DateTime.UtcNow
+                    });
+                    await _db.SaveChangesAsync();
+
                     return Page();
                 }
 
@@ -83,7 +95,16 @@ namespace BookwormOnline.Pages
                     return Page();
                 }
 
-                //Force logout after password reset
+                // Log successful password reset
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = user.Email,
+                    Action = "Password Reset",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
+                // Force logout after password reset
                 await _signInManager.SignOutAsync();
                 HttpContext.Session.Clear();
                 _logger.LogInformation("User successfully reset password.");
@@ -92,6 +113,16 @@ namespace BookwormOnline.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected error while resetting password for user.");
+
+                // Log unexpected error
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = RModel.Email,
+                    Action = "Password Reset Error",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return RedirectToPage("/Error/500");
             }
         }
@@ -114,6 +145,6 @@ namespace BookwormOnline.Pages
                 return "HashError";
             }
         }
-
     }
 }
+

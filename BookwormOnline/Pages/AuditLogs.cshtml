@@ -1,0 +1,29 @@
+﻿@page
+@model BookwormOnline.Pages.AuditLogsModel
+@{
+    ViewData["Title"] = "Audit Logs";
+}
+
+<h1>Audit Logs</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>User Email</th>
+            <th>Action</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model.AuditLogs)
+        {
+            <tr>
+                <td>@log.Id</td>
+                <td>@log.UserEmail</td>
+                <td>@log.Action</td>
+                <td>@log.Timestamp</td>
+            </tr>
+        }
+    </tbody>
+</table>

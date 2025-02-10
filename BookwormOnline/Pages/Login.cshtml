@@ -36,7 +36,7 @@
                     <!-- Password -->
                     <div class="mb-3">
                         <label class="form-label" asp-for="LModel.Password">Password</label>
-                        <input type="password" asp-for="LModel.Password" class="form-control" required />
+                        <input type="password" asp-for="LModel.Password" class="form-control" required value="P@ssw0rd1234"/>
                         <span asp-validation-for="LModel.Password" class="text-danger"></span>
                     </div>
 
@@ -86,6 +86,14 @@
                     $(this).next(".text-danger").text("");
                 }
             });
+                $("#LModel_Password").on("input", function () {
+            if ($(this).val().trim() === "") {
+                    $(this).next(".text-danger").text("This field is required.");
+                }
+                else {
+                    $(this).next(".text-danger").text("");
+                }
+        });
         });
     </script>
 }

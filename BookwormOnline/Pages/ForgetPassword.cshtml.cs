@@ -8,7 +8,6 @@ using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using BookwormOnline.Model;
 using BookwormOnline.Services;
-using System.Web;
 using Microsoft.AspNetCore.WebUtilities;
 
 namespace BookwormOnline.Pages
@@ -18,12 +17,14 @@ namespace BookwormOnline.Pages
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<ForgotPasswordModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly AuthDbContext _db;
 
-        public ForgotPasswordModel(UserManager<ApplicationUser> userManager, ILogger<ForgotPasswordModel> logger, IEmailSender emailSender)
+        public ForgotPasswordModel(UserManager<ApplicationUser> userManager, ILogger<ForgotPasswordModel> logger, IEmailSender emailSender, AuthDbContext db)
         {
             _userManager = userManager;
             _logger = logger;
             _emailSender = emailSender;
+            _db = db;
         }
 
         [BindProperty]
@@ -57,6 +58,15 @@ namespace BookwormOnline.Pages
                 "Reset Your Password",
                 $"Click <a href='{resetLink}'>here</a> to reset your password."
             );
+
+            // Log the password reset request
+            _db.AuditLogs.Add(new AuditLog
+            {
+                UserEmail = user.Email,
+                Action = "Password Reset Requested",
+                Timestamp = DateTime.UtcNow
+            });
+            await _db.SaveChangesAsync();
 
             _logger.LogInformation("Password reset email sent.");
             return RedirectToPage("/Login"); // Redirect properly

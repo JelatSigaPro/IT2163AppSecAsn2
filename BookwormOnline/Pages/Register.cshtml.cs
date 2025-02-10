@@ -11,16 +11,17 @@ using System.Text;
 using System.Threading.Tasks;
 using BookwormOnline.Model;
 using System.Net;
-using System.Data.SqlTypes;
 
 namespace BookwormOnline.Pages
 {
     public class RegisterModel : PageModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
         private readonly ILogger<RegisterModel> _logger;
+        private readonly AuthDbContext _db;
 
         [BindProperty]
         public Register RModel { get; set; }
@@ -28,12 +29,14 @@ namespace BookwormOnline.Pages
         private readonly byte[] encryptionKey;
         private readonly byte[] iv;
 
-        public RegisterModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, ILogger<RegisterModel> logger)
+        public RegisterModel(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, ILogger<RegisterModel> logger, AuthDbContext db)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _signInManager = signInManager;
             _configuration = configuration;
             _logger = logger;
+            _db = db;
 
             encryptionKey = Convert.FromBase64String(_configuration["EncryptionSettings:AESKey"]);
             iv = Convert.FromBase64String(_configuration["EncryptionSettings:AESIV"]);
@@ -139,13 +142,34 @@ namespace BookwormOnline.Pages
                     SessionToken = sessionToken
                 };
 
-
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
                     HttpContext.Session.SetString("SessionToken", sessionToken);
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation("New user registered successfully.");
+
+                    // Log successful registration
+                    _db.AuditLogs.Add(new AuditLog
+                    {
+                        UserEmail = user.Email,
+                        Action = "User Registered",
+                        Timestamp = DateTime.UtcNow
+                    });
+                    await _db.SaveChangesAsync();
+
+                    // Determine the role based on the email
+                    string role = RModel.Email.ToLower() == "admin@example.com" ? "Admin" : "User";
+
+                    // Ensure the role exists
+                    if (!await _roleManager.RoleExistsAsync(role))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(role));
+                    }
+
+                    // Assign the role to the user
+                    await _userManager.AddToRoleAsync(user, role);
+
                     return RedirectToPage("Index");
                 }
 
@@ -159,6 +183,16 @@ namespace BookwormOnline.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred during user registration.");
+
+                // Log registration error
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = RModel.Email,
+                    Action = "Registration Error",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return RedirectToPage("/Error/500");
             }
         }
@@ -232,3 +266,5 @@ namespace BookwormOnline.Pages
         }
     }
 }
+
+

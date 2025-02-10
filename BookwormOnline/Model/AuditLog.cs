@@ -12,7 +12,7 @@ namespace BookwormOnline.Model
         public string UserEmail { get; set; } // Stores email of user
 
         [Required]
-        public string Action { get; set; } // "Login" or "Logout"
+        public string Action { get; set; }
 
         [Required]
         public DateTime Timestamp { get; set; } // Time of event

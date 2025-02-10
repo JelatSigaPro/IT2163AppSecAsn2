@@ -14,13 +14,15 @@ namespace BookwormOnline.Pages
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly AuthDbContext _db;
         private readonly ILogger<Verify2FAModel> _logger;
         private readonly IEmailSender _emailSender; // If using Email
 
-        public Verify2FAModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ILogger<Verify2FAModel> logger, IEmailSender emailSender)
+        public Verify2FAModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AuthDbContext db, ILogger<Verify2FAModel> logger, IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _db = db;
             _logger = logger;
             _emailSender = emailSender; // Service to send 2FA code
         }
@@ -45,16 +47,46 @@ namespace BookwormOnline.Pages
                 {
                     ModelState.AddModelError("", "Invalid authentication code. Please try again.");
                     _logger.LogWarning("Invalid 2FA code entered by user.");
+
+                    // Log failed 2FA attempt
+                    _db.AuditLogs.Add(new AuditLog
+                    {
+                        UserEmail = user.Email,
+                        Action = "Failed 2FA Attempt",
+                        Timestamp = DateTime.UtcNow
+                    });
+                    await _db.SaveChangesAsync();
+
                     return Page();
                 }
 
                 _logger.LogInformation("User successfully authenticated with 2FA.");
+
+                // Log successful 2FA
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = user.Email,
+                    Action = "Successful 2FA",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return RedirectToPage("/Index");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected error verifying 2FA for user");
                 ModelState.AddModelError("", "An error occurred while verifying your authentication code. Please try again.");
+
+                // Log unexpected error
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = User.Identity?.Name,
+                    Action = "2FA Verification Error",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return Page();
             }
         }
@@ -84,12 +116,31 @@ namespace BookwormOnline.Pages
                 await _emailSender.SendEmailAsync(user.Email, "Your Two-Factor Authentication Code", $"Your 2FA code is: {token}");
                 _logger.LogInformation("2FA token sent to user.");
 
+                // Log 2FA token sent
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = user.Email,
+                    Action = "2FA Token Sent",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return Page();
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error sending 2FA code to user.");
                 ModelState.AddModelError("", "An error occurred while sending your authentication code. Please try again.");
+
+                // Log unexpected error
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = User.Identity?.Name,
+                    Action = "2FA Token Send Error",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return Page();
             }
         }
@@ -102,3 +153,5 @@ namespace BookwormOnline.Pages
         public string Code { get; set; }
     }
 }
+
+

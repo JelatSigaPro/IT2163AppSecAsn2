@@ -85,17 +85,36 @@ namespace BookwormOnline.Pages
                         await _userManager.SetLockoutEndDateAsync(user, DateTimeOffset.UtcNow.AddMinutes(5));
                         _logger.LogWarning("User is locked out due to multiple failed attempts.");
                         ModelState.AddModelError("", "Too many failed login attempts. Your account is locked for 5 minutes.");
+
+                        // Log account lockout
+                        _db.AuditLogs.Add(new AuditLog
+                        {
+                            UserEmail = user.Email,
+                            Action = "Account Locked",
+                            Timestamp = DateTime.UtcNow
+                        });
+                        await _db.SaveChangesAsync();
                     }
                     else
                     {
                         _logger.LogWarning("Invalid credentials.");
                         ModelState.AddModelError("", $"Invalid credentials. {attemptsLeft} attempt(s) left.");
+
+                        // Log failed login attempt
+                        _db.AuditLogs.Add(new AuditLog
+                        {
+                            UserEmail = user.Email,
+                            Action = "Failed Login Attempt",
+                            Timestamp = DateTime.UtcNow
+                        });
+                        await _db.SaveChangesAsync();
                     }
                     return Page();
                 }
 
                 await _userManager.ResetAccessFailedCountAsync(user);
 
+                // Log successful login
                 _db.AuditLogs.Add(new AuditLog
                 {
                     UserEmail = user.Email,
@@ -137,6 +156,16 @@ namespace BookwormOnline.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected error during login.");
+
+                // Log unexpected error
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = LModel.Email,
+                    Action = "Login Error",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return RedirectToPage("/Error/500");
             }
         }

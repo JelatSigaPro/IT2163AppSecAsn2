@@ -8,22 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using BookwormOnline.Model;
 using BookwormOnline.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookwormOnline.Pages
 {
+    [Authorize(Roles = "Admin,User")]
     public class ChangePasswordModel : PageModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly AuthDbContext _db;
         private readonly ILogger<ChangePasswordModel> _logger;
 
         // Define Minimum Password Age Policy
         private readonly TimeSpan MinPasswordAge = TimeSpan.FromDays(1);
 
-        public ChangePasswordModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ILogger<ChangePasswordModel> logger)
+        public ChangePasswordModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AuthDbContext db, ILogger<ChangePasswordModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _db = db;
             _logger = logger;
         }
 
@@ -74,6 +78,16 @@ namespace BookwormOnline.Pages
                 {
                     ModelState.AddModelError("", "The current password is incorrect.");
                     _logger.LogWarning("Password change failed: Incorrect old password for user.");
+
+                    // Log failed password change attempt
+                    _db.AuditLogs.Add(new AuditLog
+                    {
+                        UserEmail = user.Email,
+                        Action = "Failed Password Change Attempt",
+                        Timestamp = DateTime.UtcNow
+                    });
+                    await _db.SaveChangesAsync();
+
                     return Page();
                 }
 
@@ -88,6 +102,16 @@ namespace BookwormOnline.Pages
                 {
                     ModelState.AddModelError("", "You cannot reuse your last two passwords. Please choose a different password.");
                     _logger.LogWarning("Password change failed: User attempted to reuse an old password.");
+
+                    // Log failed password change attempt
+                    _db.AuditLogs.Add(new AuditLog
+                    {
+                        UserEmail = user.Email,
+                        Action = "Failed Password Change Attempt",
+                        Timestamp = DateTime.UtcNow
+                    });
+                    await _db.SaveChangesAsync();
+
                     return Page();
                 }
 
@@ -108,6 +132,15 @@ namespace BookwormOnline.Pages
                     return Page();
                 }
 
+                // Log successful password change
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = user.Email,
+                    Action = "Password Changed",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 // Force User to Log In Again After Changing Password
                 await _signInManager.SignOutAsync();
                 _logger.LogInformation("User changed password successfully.");
@@ -117,11 +150,19 @@ namespace BookwormOnline.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected error while changing password for user.");
+
+                // Log unexpected error
+                _db.AuditLogs.Add(new AuditLog
+                {
+                    UserEmail = User.Identity?.Name,
+                    Action = "Password Change Error",
+                    Timestamp = DateTime.UtcNow
+                });
+                await _db.SaveChangesAsync();
+
                 return RedirectToPage("/Errors/500");
             }
         }
-
-
 
         // Helper Function: Hash Password with an Existing Salt
         private string HashPasswordWithSalt(string password, string salt)
@@ -143,3 +184,4 @@ namespace BookwormOnline.Pages
         }
     }
 }
+

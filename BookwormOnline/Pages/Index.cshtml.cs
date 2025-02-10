@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BookwormOnline.Model;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookwormOnline.Pages
 {
