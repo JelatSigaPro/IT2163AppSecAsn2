@@ -37,7 +37,7 @@ namespace BookwormOnline.Pages
                     });
 
                     await _db.SaveChangesAsync();
-                    _logger.LogInformation($"User {userEmail} logged out successfully.");
+                    _logger.LogInformation($"User logged out successfully.");
                 }
                 else
                 {

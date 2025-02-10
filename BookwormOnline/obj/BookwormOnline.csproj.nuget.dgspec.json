@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\BookwormOnline\\BookwormOnline.csproj": {}
+    "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\BookwormOnline\\BookwormOnline.csproj": {
+    "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\BookwormOnline\\BookwormOnline.csproj",
+        "projectUniqueName": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj",
         "projectName": "BookwormOnline",
-        "projectPath": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\BookwormOnline\\BookwormOnline.csproj",
+        "projectPath": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj",
         "packagesPath": "C:\\Users\\samli_gupj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\BookwormOnline\\obj\\",
+        "outputPath": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
