@@ -1,0 +1,181 @@
+﻿@page
+@model BookwormOnline.Pages.RegisterModel
+@{
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <h1 class="mb-3">Register</h1>
+
+            @if (ViewData["ShowAdminRegisterMessage"] != null)
+            {
+                <div class="alert alert-warning">
+                    @ViewData["ShowAdminRegisterMessage"]
+                </div>
+            }
+
+            <form method="post" enctype="multipart/form-data" id="registerForm">
+                @Html.AntiForgeryToken()  <!-- ✅ Protects against CSRF attacks -->
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <!-- First Name -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.FirstName">First Name</label>
+                    <input type="text" asp-for="RModel.FirstName" class="form-control" required pattern="^[A-Za-z\s]+$" />
+                    <span asp-validation-for="RModel.FirstName" class="text-danger"></span>
+                </div>
+
+                <!-- Last Name -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.LastName">Last Name</label>
+                    <input type="text" asp-for="RModel.LastName" class="form-control" required pattern="^[A-Za-z\s]+$" />
+                    <span asp-validation-for="RModel.LastName" class="text-danger"></span>
+                </div>
+
+                <!-- Credit Card No -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.CreditCardNo">Credit Card No</label>
+                    <input type="text" asp-for="RModel.CreditCardNo" class="form-control" required pattern="^\d{16}$" maxlength="16" />
+                    <span asp-validation-for="RModel.CreditCardNo" class="text-danger"></span>
+                </div>
+
+                <!-- Mobile No -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.MobileNo">Mobile No</label>
+                    <input type="tel" asp-for="RModel.MobileNo" class="form-control" required pattern="^\d{8}$" maxlength="8" />
+                    <span asp-validation-for="RModel.MobileNo" class="text-danger"></span>
+                </div>
+
+                <!-- Billing Address -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.BillingAddress">Billing Address</label>
+                    <input type="text" asp-for="RModel.BillingAddress" class="form-control" required maxlength="255" />
+                    <span asp-validation-for="RModel.BillingAddress" class="text-danger"></span>
+                </div>
+
+                <!-- Shipping Address -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.ShippingAddress">Shipping Address</label>
+                    <textarea asp-for="RModel.ShippingAddress" class="form-control" required maxlength="255"></textarea>
+                    <span asp-validation-for="RModel.ShippingAddress" class="text-danger"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Email">Email Address</label>
+                    <input type="email" asp-for="RModel.Email" class="form-control" required pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                    <span asp-validation-for="RModel.Email" class="text-danger"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Password">Password</label>
+                    <input type="password" asp-for="RModel.Password" class="form-control" required />
+                    <span asp-validation-for="RModel.Password" class="text-danger"></span>
+                    <div id="passwordStrength" class="mt-1"></div> <!-- Password Strength Feedback -->
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.ConfirmPassword">Confirm Password</label>
+                    <input type="password" asp-for="RModel.ConfirmPassword" class="form-control" required />
+                    <span asp-validation-for="RModel.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <!-- Profile Photo Upload (Only JPG) -->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Photo">Profile Photo (.JPG only)</label>
+                    <input type="file" asp-for="RModel.Photo" class="form-control" accept=".jpg" required />
+                    <span asp-validation-for="RModel.Photo" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/register-validation.js"></script> <!-- Our custom validation script -->
+
+    <script>
+        $(document).ready(function () {
+            // Real-time validation
+            $("input, textarea").on("input", function () {
+                if ($(this).val().trim() === "") {
+                    $(this).next(".text-danger").text("This field is required.");
+                } else {
+                    $(this).next(".text-danger").text(""); // Clear error message
+                }
+            });
+
+            // Validate credit card format
+            $("#RModel_CreditCardNo").on("input", function () {
+                var ccPattern = /^\d{16}$/;
+                if ($(this).val().trim() === "") {
+                    $(this).next(".text-danger").text("This field is required.");
+                }
+                else if (!ccPattern.test($(this).val())) {
+                    $(this).next(".text-danger").text("Credit card number must be exactly 16 digits.");
+                } else {
+                    $(this).next(".text-danger").text("");
+                }
+            });
+
+            // Validate mobile number format
+            $("#RModel_MobileNo").on("input", function () {
+                var phonePattern = /^\d{8}$/;
+                if ($(this).val().trim() === "") {
+                    $(this).next(".text-danger").text("This field is required.");
+                } else if (!phonePattern.test($(this).val())) {
+                    $(this).next(".text-danger").text("Mobile number must be exactly 8 digits.");
+                } else {
+                    $(this).next(".text-danger").text("");
+                }
+            });
+
+            // Validate first & last name (Only letters)
+            $("#RModel_FirstName, #RModel_LastName").on("input", function () {
+                var namePattern = /^[A-Za-z\s]+$/;
+                if ($(this).val().trim() === "") {
+                    $(this).next(".text-danger").text("This field is required.");
+                }
+                else if (!namePattern.test($(this).val())) {
+                    $(this).next(".text-danger").text("Only letters are allowed.");
+                } else {
+                    $(this).next(".text-danger").text("");
+                }
+            });
+
+            // Validate email format
+            $("#RModel_Email").on("input", function () {
+                var emailPattern = /^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if ($(this).val().trim() === "") {
+                    $(this).next(".text-danger").text("This field is required.");
+                }
+                else if (!emailPattern.test($(this).val())) {
+                    $(this).next(".text-danger").text("Invalid email format.");
+                } else {
+                    $(this).next(".text-danger").text("");
+                }
+            });
+
+            // Validate file upload (only JPG)
+            $("#RModel_Photo").on("change", function () {
+                var fileName = $(this).val();
+                if (!fileName.toLowerCase().endsWith(".jpg")) {
+                    $(this).next(".text-danger").text("Only .JPG files are allowed.");
+                } else {
+                    $(this).next(".text-danger").text("");
+                }
+            });
+        });
+    </script>
+}

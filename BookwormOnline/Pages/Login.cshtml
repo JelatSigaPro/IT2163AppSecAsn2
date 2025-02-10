@@ -1,0 +1,76 @@
+﻿@page
+@model BookwormOnline.Pages.LoginModel
+@{
+}
+
+<head>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfKG9EqAAAAABD8cRZyqNwV2N2rHa6lk1Uqvf6c"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <h1 class="mb-3">Login</h1>
+
+                <form method="post" id="login-form">
+                    @Html.AntiForgeryToken()  <!-- ✅ Protects against CSRF attacks -->
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label class="form-label" asp-for="LModel.Email">Email Address</label>
+                        <input type="email" asp-for="LModel.Email" class="form-control" value="jeraldliu06@gmail.com" required />
+                        <span asp-validation-for="LModel.Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-3">
+                        <label class="form-label" asp-for="LModel.Password">Password</label>
+                        <input type="password" asp-for="LModel.Password" class="form-control" value="P@ssw0rd1234" required />
+                        <span asp-validation-for="LModel.Password" class="text-danger"></span>
+                    </div>
+
+                    <!-- Hidden input for reCAPTCHA token -->
+                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+                    <!-- Submit Button -->
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LfKG9EqAAAAABD8cRZyqNwV2N2rHa6lk1Uqvf6c', { action: 'login' }).then(function (token) {
+                document.getElementById("g-recaptcha-response").value = token;
+            });
+        });
+    </script>
+</body>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Validate email format
+            $("#LModel_Email").on("input", function () {
+                var emailPattern = /^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if ($(this).val().trim() === "") {
+                    $(this).next(".text-danger").text("This field is required.");
+                }
+                else if (!emailPattern.test($(this).val())) {
+                    $(this).next(".text-danger").text("Invalid email format.");
+                } else {
+                    $(this).next(".text-danger").text("");
+                }
+            });
+        });
+    </script>
+}
