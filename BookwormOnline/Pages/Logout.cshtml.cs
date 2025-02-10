@@ -40,7 +40,7 @@ namespace BookwormOnline.Pages
                     });
 
                     await _db.SaveChangesAsync();
-                    _logger.LogInformation("User {Email} logged out successfully.", userEmail);
+                    _logger.LogInformation("User logged out successfully.");
                 }
                 else
                 {

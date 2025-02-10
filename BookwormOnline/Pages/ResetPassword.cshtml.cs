@@ -64,7 +64,7 @@ namespace BookwormOnline.Pages
                     newHashedPassword == user.PreviousPasswordHash2)
                 {
                     ModelState.AddModelError("", "You cannot reuse your last two passwords. Please choose a different password.");
-                    _logger.LogWarning("Password reset failed: User {Email} attempted to reuse an old password.", user.Email);
+                    _logger.LogWarning("Password reset failed: User attempted to reuse an old password.");
 
                     // Log failed password reset attempt
                     _db.AuditLogs.Add(new AuditLog
@@ -87,7 +87,7 @@ namespace BookwormOnline.Pages
                 var updateResult = await _userManager.UpdateAsync(user);
                 if (!updateResult.Succeeded)
                 {
-                    _logger.LogError("Password reset failed for user {Email}.", user.Email);
+                    _logger.LogError("Password reset failed for user.");
                     foreach (var error in updateResult.Errors)
                     {
                         ModelState.AddModelError("", error.Description);
