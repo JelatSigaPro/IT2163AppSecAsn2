@@ -29,7 +29,7 @@ namespace BookwormOnline.Pages
             user.Is2FAEnabled = true;
             await _userManager.UpdateAsync(user);
 
-            _logger.LogInformation("User {Email} enabled 2FA.", user.Email);
+            _logger.LogInformation("User enabled 2FA.");
 
             return RedirectToPage("/Index");
         }
@@ -45,7 +45,7 @@ namespace BookwormOnline.Pages
             user.Is2FAEnabled = false;
             await _userManager.UpdateAsync(user);
 
-            _logger.LogInformation("User {Email} disabled 2FA.", user.Email);
+            _logger.LogInformation("User disabled 2FA.");
 
             return RedirectToPage("/Index");
         }

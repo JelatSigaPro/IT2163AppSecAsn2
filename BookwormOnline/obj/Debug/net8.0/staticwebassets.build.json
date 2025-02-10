@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jFVZE8W4LlrCb6BMh2AWq/bjqbrCjWNwjrhJuLmrNiQ=",
+  "Hash": "T4ywZCj0Chw2/t6hh/9nfakqI7uKu5crGX3UiefuPlc=",
   "Source": "BookwormOnline",
   "BasePath": "_content/BookwormOnline",
   "Mode": "Default",
@@ -99,27 +99,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\js\\register-validation.js",
-      "SourceId": "BookwormOnline",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\",
-      "BasePath": "_content/BookwormOnline",
-      "RelativePath": "js/register-validation#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "7vxcngu44t",
-      "Integrity": "jTKam0BWT7OaLYDzwMmGWHaucNhO4tNnfL5BT69z3Nc=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\register-validation.js"
     },
     {
       "Identity": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\js\\site.js",
@@ -1939,88 +1918,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
-        }
-      ]
-    },
-    {
-      "Route": "js/register-validation.7vxcngu44t.js",
-      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\js\\register-validation.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1496"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jTKam0BWT7OaLYDzwMmGWHaucNhO4tNnfL5BT69z3Nc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 14:09:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7vxcngu44t"
-        },
-        {
-          "Name": "label",
-          "Value": "js/register-validation.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-jTKam0BWT7OaLYDzwMmGWHaucNhO4tNnfL5BT69z3Nc="
-        }
-      ]
-    },
-    {
-      "Route": "js/register-validation.js",
-      "AssetFile": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\BookwormOnline\\BookwormOnline\\wwwroot\\js\\register-validation.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1496"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jTKam0BWT7OaLYDzwMmGWHaucNhO4tNnfL5BT69z3Nc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 14:09:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jTKam0BWT7OaLYDzwMmGWHaucNhO4tNnfL5BT69z3Nc="
         }
       ]
     },

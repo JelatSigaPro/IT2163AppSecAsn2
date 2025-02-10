@@ -56,31 +56,30 @@ namespace BookwormOnline.Pages
                     return RedirectToPage("/Login");
                 }
 
-                // Enforce Minimum Password Age
+                //Enforce Minimum Password Age
                 if (user.LastPasswordChangeDate.HasValue)
                 {
                     var timeSinceLastChange = DateTime.UtcNow - user.LastPasswordChangeDate.Value;
                     if (timeSinceLastChange < MinPasswordAge)
                     {
                         ModelState.AddModelError("", $"You can only change your password once every {MinPasswordAge.Days} day(s). Please try again later.");
-                        _logger.LogWarning("User {Email} attempted to change password too soon.", user.Email);
+                        _logger.LogWarning("User attempted to change password too soon.");
                         return Page();
                     }
                 }
 
-                // Check if Old Password Matches the Stored Hashed Password
+                //Check if Old Password Matches the Stored Hashed Password
                 string enteredOldPasswordHash = HashPasswordWithSalt(PModel.OldPassword, user.PasswordSalt);
                 if (enteredOldPasswordHash != user.PasswordHash)
                 {
                     ModelState.AddModelError("", "The current password is incorrect.");
-                    _logger.LogWarning("Password change failed: Incorrect old password for user {Email}", user.Email);
+                    _logger.LogWarning("Password change failed: Incorrect old password for user.");
                     return Page();
                 }
 
-                // Generate a New Salt & Hash the New Password
-                string newSalt;
-                string newHashedPassword;
-                GenerateSaltAndHash(PModel.NewPassword, out newHashedPassword, out newSalt);
+                //Hash New Password Using Existing Salt (Do NOT Generate New Salt)
+                string existingSalt = user.PasswordSalt;
+                string newHashedPassword = HashPasswordWithSalt(PModel.NewPassword, existingSalt);
 
                 // Check if the new password matches any of the last 2 passwords
                 if (newHashedPassword == user.PasswordHash ||
@@ -88,7 +87,7 @@ namespace BookwormOnline.Pages
                     newHashedPassword == user.PreviousPasswordHash2)
                 {
                     ModelState.AddModelError("", "You cannot reuse your last two passwords. Please choose a different password.");
-                    _logger.LogWarning("Password change failed: User {Email} attempted to reuse an old password.", user.Email);
+                    _logger.LogWarning("Password change failed: User attempted to reuse an old password.");
                     return Page();
                 }
 
@@ -96,13 +95,12 @@ namespace BookwormOnline.Pages
                 user.PreviousPasswordHash2 = user.PreviousPasswordHash1;
                 user.PreviousPasswordHash1 = user.PasswordHash;
                 user.PasswordHash = newHashedPassword;
-                user.PasswordSalt = newSalt;  // Store new salt
                 user.LastPasswordChangeDate = DateTime.UtcNow;
 
                 var updateResult = await _userManager.UpdateAsync(user);
                 if (!updateResult.Succeeded)
                 {
-                    _logger.LogError("Password update failed for user {Email}.", user.Email);
+                    _logger.LogError("Password update failed for user.");
                     foreach (var error in updateResult.Errors)
                     {
                         ModelState.AddModelError("", error.Description);
@@ -112,41 +110,18 @@ namespace BookwormOnline.Pages
 
                 // Force User to Log In Again After Changing Password
                 await _signInManager.SignOutAsync();
-                _logger.LogInformation("User {Email} changed password successfully.", user.Email);
+                _logger.LogInformation("User changed password successfully.");
 
                 return RedirectToPage("/Login", new { message = "Password changed successfully. Please log in again." });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error while changing password for user {Email}", PModel?.OldPassword);
+                _logger.LogError(ex, "Unexpected error while changing password for user.");
                 return RedirectToPage("/Errors/500");
             }
         }
 
-        // Helper Function: Generate New Salt & Hash Password
-        private void GenerateSaltAndHash(string password, out string finalHash, out string salt)
-        {
-            try
-            {
-                // Generate a random salt
-                RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
-                byte[] saltByte = new byte[8]; // 8-byte salt
-                rng.GetBytes(saltByte);
-                salt = Convert.ToBase64String(saltByte);
 
-                // Hash password + salt
-                SHA512Managed hashing = new SHA512Managed();
-                string pwdWithSalt = password + salt;
-                byte[] hashWithSalt = hashing.ComputeHash(Encoding.UTF8.GetBytes(pwdWithSalt));
-                finalHash = Convert.ToBase64String(hashWithSalt);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error generating salt and hashing password.");
-                finalHash = "HashError";
-                salt = "SaltError";
-            }
-        }
 
         // Helper Function: Hash Password with an Existing Salt
         private string HashPasswordWithSalt(string password, string salt)

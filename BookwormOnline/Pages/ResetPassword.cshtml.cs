@@ -47,16 +47,16 @@ namespace BookwormOnline.Pages
                 var user = await _userManager.FindByEmailAsync(RModel.Email);
                 if (user == null)
                 {
-                    _logger.LogWarning("Password reset failed: User not found for email {Email}", RModel.Email);
+                    _logger.LogWarning("Password reset failed: User not found for email.");
                     return RedirectToPage("/Login");
                 }
 
                 // Generate a New Salt & Hash the New Password
-                string newSalt;
-                string newHashedPassword;
-                GenerateSaltAndHash(RModel.NewPassword, out newHashedPassword, out newSalt);
+                // Use the existing salt instead of generating a new one
+                string existingSalt = user.PasswordSalt;
+                string newHashedPassword = HashPasswordWithSalt(RModel.NewPassword, existingSalt);
 
-                // Check if the new password was used before
+                // Ensure new password is not in password history
                 if (newHashedPassword == user.PasswordHash ||
                     newHashedPassword == user.PreviousPasswordHash1 ||
                     newHashedPassword == user.PreviousPasswordHash2)
@@ -70,8 +70,7 @@ namespace BookwormOnline.Pages
                 user.PreviousPasswordHash2 = user.PreviousPasswordHash1;
                 user.PreviousPasswordHash1 = user.PasswordHash;
                 user.PasswordHash = newHashedPassword;
-                user.PasswordSalt = newSalt;  // Store new salt
-                user.LastPasswordChangeDate = DateTime.UtcNow; // Update last password change
+                user.LastPasswordChangeDate = DateTime.UtcNow; // Update last password change date
 
                 var updateResult = await _userManager.UpdateAsync(user);
                 if (!updateResult.Succeeded)
@@ -84,43 +83,37 @@ namespace BookwormOnline.Pages
                     return Page();
                 }
 
-
                 //Force logout after password reset
                 await _signInManager.SignOutAsync();
                 HttpContext.Session.Clear();
-                _logger.LogInformation("User {Email} successfully reset password.", user.Email);
+                _logger.LogInformation("User successfully reset password.");
                 return RedirectToPage("/Login", new { message = "Password has been reset successfully. Please log in." });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error while resetting password for user {Email}", RModel.Email);
+                _logger.LogError(ex, "Unexpected error while resetting password for user.");
                 return RedirectToPage("/Error/500");
             }
         }
 
-        //Helper Function: Generate New Salt & Hash Password
-        private void GenerateSaltAndHash(string password, out string finalHash, out string salt)
+        // Helper Function: Hash Password with an Existing Salt
+        private string HashPasswordWithSalt(string password, string salt)
         {
             try
             {
-                // Generate a random salt
-                RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
-                byte[] saltByte = new byte[8]; // 8-byte salt
-                rng.GetBytes(saltByte);
-                salt = Convert.ToBase64String(saltByte);
-
-                // Hash password + salt
-                SHA512Managed hashing = new SHA512Managed();
-                string pwdWithSalt = password + salt;
-                byte[] hashWithSalt = hashing.ComputeHash(Encoding.UTF8.GetBytes(pwdWithSalt));
-                finalHash = Convert.ToBase64String(hashWithSalt);
+                using (SHA512Managed hashing = new SHA512Managed())
+                {
+                    string pwdWithSalt = password + salt; // Combine password with existing salt
+                    byte[] hashWithSalt = hashing.ComputeHash(Encoding.UTF8.GetBytes(pwdWithSalt));
+                    return Convert.ToBase64String(hashWithSalt);
+                }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error generating salt and hashing password.");
-                finalHash = "HashError";
-                salt = "SaltError";
+                _logger.LogError(ex, "Error hashing password with existing salt.");
+                return "HashError";
             }
         }
+
     }
 }

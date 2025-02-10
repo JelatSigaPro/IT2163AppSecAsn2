@@ -42,7 +42,7 @@ namespace BookwormOnline.Pages
             if (user == null)
             {
                 ModelState.AddModelError("", "Email Not found");
-                _logger.LogWarning("Password reset requested for non-existing email: {Email}", FModel.Email);
+                _logger.LogWarning("Password reset requested for non-existing email.");
                 return Page();
             }
 
@@ -58,7 +58,7 @@ namespace BookwormOnline.Pages
                 $"Click <a href='{resetLink}'>here</a> to reset your password."
             );
 
-            _logger.LogInformation("Password reset email sent to {Email}", FModel.Email);
+            _logger.LogInformation("Password reset email sent.");
             return RedirectToPage("/Login"); // Redirect properly
         }
     }

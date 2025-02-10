@@ -133,8 +133,8 @@ namespace BookwormOnline.Pages
                     PhotoPath = photoPath ?? null,
                     PasswordHash = hashedPassword, //Store hashed password
                     PasswordSalt = salt,           // Store generated salt
-                    PreviousPasswordHash1 = hashedPassword, // ? Set to null on new registration
-                    PreviousPasswordHash2 = "", // ? Set to null on new registration
+                    PreviousPasswordHash1 = hashedPassword,
+                    PreviousPasswordHash2 = "",
                     LastPasswordChangeDate = DateTime.UtcNow,
                     SessionToken = sessionToken
                 };
@@ -145,7 +145,7 @@ namespace BookwormOnline.Pages
                 {
                     HttpContext.Session.SetString("SessionToken", sessionToken);
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    _logger.LogInformation("New user {Email} registered successfully.", user.Email);
+                    _logger.LogInformation("New user registered successfully.");
                     return RedirectToPage("Index");
                 }
 

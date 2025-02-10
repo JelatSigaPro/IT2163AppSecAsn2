@@ -44,16 +44,16 @@ namespace BookwormOnline.Pages
                 if (!isValid)
                 {
                     ModelState.AddModelError("", "Invalid authentication code. Please try again.");
-                    _logger.LogWarning("Invalid 2FA code entered by user {Email}.", user.Email);
+                    _logger.LogWarning("Invalid 2FA code entered by user.");
                     return Page();
                 }
 
-                _logger.LogInformation("User {Email} successfully authenticated with 2FA.", user.Email);
+                _logger.LogInformation("User successfully authenticated with 2FA.");
                 return RedirectToPage("/Index");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error verifying 2FA for user {Email}", VModel?.Code);
+                _logger.LogError(ex, "Unexpected error verifying 2FA for user");
                 ModelState.AddModelError("", "An error occurred while verifying your authentication code. Please try again.");
                 return Page();
             }
@@ -75,20 +75,20 @@ namespace BookwormOnline.Pages
 
                 if (string.IsNullOrEmpty(token))
                 {
-                    _logger.LogError("Failed to generate 2FA token for user {Email}.", user.Email);
+                    _logger.LogError("Failed to generate 2FA token for user.");
                     ModelState.AddModelError("", "An error occurred while generating the authentication code. Please try again.");
                     return Page();
                 }
 
                 // Send the token via Email
                 await _emailSender.SendEmailAsync(user.Email, "Your Two-Factor Authentication Code", $"Your 2FA code is: {token}");
-                _logger.LogInformation("2FA token sent to user {Email}.", user.Email);
+                _logger.LogInformation("2FA token sent to user.");
 
                 return Page();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error sending 2FA code to user {Email}.", VModel?.Code);
+                _logger.LogError(ex, "Error sending 2FA code to user.");
                 ModelState.AddModelError("", "An error occurred while sending your authentication code. Please try again.");
                 return Page();
             }

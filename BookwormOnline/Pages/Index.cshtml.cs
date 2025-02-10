@@ -54,7 +54,7 @@ namespace BookwormOnline.Pages
                     var passwordAge = DateTime.UtcNow - user.LastPasswordChangeDate.Value;
                     if (passwordAge > TimeSpan.FromDays(90))
                     {
-                        _logger.LogWarning("User {Email} must change password due to max age policy.", user.Email);
+                        _logger.LogWarning("User must change password due to max age policy.");
                         return RedirectToPage("/ChangePassword", new { forceChange = true });
                     }
                 }
@@ -65,7 +65,7 @@ namespace BookwormOnline.Pages
                 string storedToken = HttpContext.Session.GetString("SessionToken");
                 if (string.IsNullOrEmpty(storedToken) || user.SessionToken != storedToken)
                 {
-                    _logger.LogWarning($"Session token mismatch for user {user.Email}. Logging out.");
+                    _logger.LogWarning($"Session token mismatch for user. Logging out.");
                     await _signInManager.SignOutAsync();
                     HttpContext.Session.Clear();
                     return RedirectToPage("/Login");

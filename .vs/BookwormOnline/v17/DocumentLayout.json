@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6197622F-26A2-4F3B-8103-0C12EA1BB29E}|BookwormOnline\\BookwormOnline.csproj|c:\\users\\samli_gupj\\onedrive\\documents\\as\\securitytestingasasn2\\it2163appsecasn2\\bookwormonline\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6197622F-26A2-4F3B-8103-0C12EA1BB29E}|BookwormOnline\\BookwormOnline.csproj|solutionrelative:bookwormonline\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6197622F-26A2-4F3B-8103-0C12EA1BB29E}|BookwormOnline\\BookwormOnline.csproj|c:\\users\\samli_gupj\\onedrive\\documents\\as\\securitytestingasasn2\\it2163appsecasn2\\bookwormonline\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6197622F-26A2-4F3B-8103-0C12EA1BB29E}|BookwormOnline\\BookwormOnline.csproj|solutionrelative:bookwormonline\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "BookwormOnline\\Pages\\Login.cshtml",
+              "ToolTip": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\Pages\\Login.cshtml",
+              "RelativeToolTip": "BookwormOnline\\Pages\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T17:45:07.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "BookwormOnline\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "BookwormOnline\\Pages\\Login.cshtml.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAIwJQAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T17:45:06.964Z"
             }
           ]
         }

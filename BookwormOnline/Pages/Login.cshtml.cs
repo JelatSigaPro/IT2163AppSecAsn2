@@ -30,8 +30,12 @@ namespace BookwormOnline.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public void OnGet(string? message = null)
         {
+            if (!string.IsNullOrEmpty(message))
+            {
+                ViewData["SuccessMessage"] = message;
+            }
         }
 
         [ValidateAntiForgeryToken] // Enforce CSRF protection
@@ -48,24 +52,24 @@ namespace BookwormOnline.Pages
                 string recaptchaToken = Request.Form["g-recaptcha-response"];
                 if (string.IsNullOrEmpty(recaptchaToken) || !await ValidateRecaptcha(recaptchaToken))
                 {
-                    _logger.LogWarning("reCAPTCHA validation failed for {Email}", LModel.Email);
+                    _logger.LogWarning("reCAPTCHA validation failed.");
                     ModelState.AddModelError("", "reCAPTCHA failed. Please try again.");
                     return Page();
                 }
 
                 var user = await _userManager.FindByEmailAsync(LModel.Email);
-                _logger.LogInformation("Login attempt for user: {Email}", user?.Email ?? "User not found");
+                _logger.LogInformation("Login attempt for user");
 
                 if (user == null)
                 {
-                    _logger.LogWarning("Login failed for {Email}: User not found", LModel.Email);
+                    _logger.LogWarning("Login failed: User not found");
                     ModelState.AddModelError("", "Invalid credentials.");
                     return Page();
                 }
 
                 if (await _userManager.IsLockedOutAsync(user))
                 {
-                    _logger.LogWarning("Locked out user {Email} attempted login.", user.Email);
+                    _logger.LogWarning("Locked out user attempted login.");
                     ModelState.AddModelError("", "Too many failed login attempts. Your account is locked for 5 minutes.");
                     return Page();
                 }
@@ -79,12 +83,12 @@ namespace BookwormOnline.Pages
                     if (attemptsLeft <= 0)
                     {
                         await _userManager.SetLockoutEndDateAsync(user, DateTimeOffset.UtcNow.AddMinutes(5));
-                        _logger.LogWarning("User {Email} is locked out due to multiple failed attempts.", user.Email);
+                        _logger.LogWarning("User is locked out due to multiple failed attempts.");
                         ModelState.AddModelError("", "Too many failed login attempts. Your account is locked for 5 minutes.");
                     }
                     else
                     {
-                        _logger.LogWarning("Invalid credentials for {Email}. {AttemptsLeft} attempt(s) left.", user.Email, attemptsLeft);
+                        _logger.LogWarning("Invalid credentials.");
                         ModelState.AddModelError("", $"Invalid credentials. {attemptsLeft} attempt(s) left.");
                     }
                     return Page();
@@ -118,7 +122,7 @@ namespace BookwormOnline.Pages
                     var passwordAge = DateTime.UtcNow - user.LastPasswordChangeDate.Value;
                     if (passwordAge > TimeSpan.FromDays(90))
                     {
-                        _logger.LogWarning("User {Email} must change password due to max age policy.", user.Email);
+                        _logger.LogWarning("User must change password due to max age policy.");
                         return RedirectToPage("/ChangePassword", new { forceChange = true }); // Redirect to Change Password
                     }
                 }
@@ -132,7 +136,7 @@ namespace BookwormOnline.Pages
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error during login for {Email}", LModel.Email);
+                _logger.LogError(ex, "Unexpected error during login.");
                 return RedirectToPage("/Error/500");
             }
         }
