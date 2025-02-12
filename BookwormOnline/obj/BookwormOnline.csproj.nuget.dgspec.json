@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj": {}
+    "C:\\Users\\jeral\\OneDrive\\Documents\\AS\\AssignmentTesting\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj": {
+    "C:\\Users\\jeral\\OneDrive\\Documents\\AS\\AssignmentTesting\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj",
+        "projectUniqueName": "C:\\Users\\jeral\\OneDrive\\Documents\\AS\\AssignmentTesting\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj",
         "projectName": "BookwormOnline",
-        "projectPath": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj",
-        "packagesPath": "C:\\Users\\samli_gupj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samli_gupj\\OneDrive\\Documents\\AS\\SecurityTestingASAsn2\\IT2163AppSecAsn2\\BookwormOnline\\obj\\",
+        "projectPath": "C:\\Users\\jeral\\OneDrive\\Documents\\AS\\AssignmentTesting\\IT2163AppSecAsn2\\BookwormOnline\\BookwormOnline.csproj",
+        "packagesPath": "C:\\Users\\jeral\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jeral\\OneDrive\\Documents\\AS\\AssignmentTesting\\IT2163AppSecAsn2\\BookwormOnline\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\samli_gupj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jeral\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

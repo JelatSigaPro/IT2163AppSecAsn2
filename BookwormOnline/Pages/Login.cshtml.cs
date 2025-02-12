@@ -146,6 +146,7 @@ namespace BookwormOnline.Pages
                     }
                 }
 
+
                 if (user.Is2FAEnabled)
                 {
                     return RedirectToPage("/Verify2FA");

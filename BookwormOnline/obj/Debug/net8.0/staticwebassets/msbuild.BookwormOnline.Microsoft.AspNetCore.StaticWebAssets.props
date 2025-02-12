@@ -1116,6 +1116,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0e505095-b1f9-470c-ad4e-143ea2e25eb4.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\2c32b4ec-add9-4ed2-85f4-34d5f380236f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BookwormOnline</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BookwormOnline</BasePath>
+      <RelativePath>uploads/2c32b4ec-add9-4ed2-85f4-34d5f380236f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>mk0z5x5940</Fingerprint>
+      <Integrity>psYXOSiI8GRe8Con0k1fonomQ48Ex1MjuWjxD3utJrg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\2c32b4ec-add9-4ed2-85f4-34d5f380236f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3990c987-4913-421e-bd35-8d7fe8c7bd7b.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>BookwormOnline</SourceId>
@@ -1242,6 +1260,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\6e769ed9-213d-4939-9362-8650ca818151.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\7a0f4332-d52c-406a-a64f-618d6d10ab52.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BookwormOnline</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BookwormOnline</BasePath>
+      <RelativePath>uploads/7a0f4332-d52c-406a-a64f-618d6d10ab52.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a57uqpdwio</Fingerprint>
+      <Integrity>UlK4+hlljACB2Ead1+K4zLZyZOY42zOqfUe+BkSt61c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\7a0f4332-d52c-406a-a64f-618d6d10ab52.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>BookwormOnline</SourceId>
@@ -1260,6 +1296,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b380b56f-eb88-4a0c-ad9e-427d8ca1e08a.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ba468820-db28-4aa3-b5d7-38f8a7e85420.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BookwormOnline</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BookwormOnline</BasePath>
+      <RelativePath>uploads/ba468820-db28-4aa3-b5d7-38f8a7e85420.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ituiggjahp</Fingerprint>
+      <Integrity>hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ba468820-db28-4aa3-b5d7-38f8a7e85420.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c055f447-1121-43b7-b3a6-20ac45d49f34.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BookwormOnline</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BookwormOnline</BasePath>
+      <RelativePath>uploads/c055f447-1121-43b7-b3a6-20ac45d49f34.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>epx1anfchx</Fingerprint>
+      <Integrity>HqnnClqzPcra/vOEEps0QTowKoBXjDIQ5Boa8NgyOyc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c055f447-1121-43b7-b3a6-20ac45d49f34.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c48bf7b2-f316-4350-b1e8-2a8033c1c540.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>BookwormOnline</SourceId>
@@ -1277,6 +1349,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c48bf7b2-f316-4350-b1e8-2a8033c1c540.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c74e3f03-74af-452c-9721-aa76f2091757.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BookwormOnline</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BookwormOnline</BasePath>
+      <RelativePath>uploads/c74e3f03-74af-452c-9721-aa76f2091757.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ituiggjahp</Fingerprint>
+      <Integrity>hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c74e3f03-74af-452c-9721-aa76f2091757.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c8c1bc72-9dda-49da-acad-76559cb72194.jpg'))">
       <SourceType>Package</SourceType>
@@ -1331,6 +1421,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f42223cb-fa03-47fb-a159-933b5929993f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f67a8ba5-c390-456c-82fa-a7ce5c2b39e9.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>BookwormOnline</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BookwormOnline</BasePath>
+      <RelativePath>uploads/f67a8ba5-c390-456c-82fa-a7ce5c2b39e9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ituiggjahp</Fingerprint>
+      <Integrity>hmxDvaCrhAw7ongrGotJKyxqC2/geSbKVURHRkISY6o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f67a8ba5-c390-456c-82fa-a7ce5c2b39e9.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f77f8d6b-255d-4142-bc01-a8db98a2f442.jpg'))">
       <SourceType>Package</SourceType>

@@ -79,7 +79,7 @@
                 <!-- Confirm Password -->
                 <div class="mb-3">
                     <label class="form-label" asp-for="RModel.ConfirmPassword">Confirm Password</label>
-                    <input type="password" asp-for="RModel.ConfirmPassword" class="form-control" required />
+                    <input type="password" asp-for="RModel.ConfirmPassword" class="form-control" required id="confirmPassword"/>
                     <span asp-validation-for="RModel.ConfirmPassword" class="text-danger"></span>
                 </div>
 
@@ -150,6 +150,20 @@
         // Display Feedback
         $("#passwordStrength").html(strengthMessage);
     });
+        $("#confirmPassword").on("input", function () {
+                        var newPassword = $("#RModel_Password").val();
+                    var confirmPassword = $(this).val();
+
+                    if ($(this).val().trim() === "") {
+                        $(this).next(".text-danger").text("This field is required.");
+                    }
+                    else if (newPassword !== confirmPassword) {
+                        $(this).next(".text-danger").text("Passwords do not match.");
+                    }
+                    else {
+                        $(this).next(".text-danger").text("");
+                    }
+                });
 
             // Validate credit card format
             $("#RModel_CreditCardNo").on("input", function () {

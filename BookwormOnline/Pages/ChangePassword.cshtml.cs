@@ -21,7 +21,7 @@ namespace BookwormOnline.Pages
         private readonly ILogger<ChangePasswordModel> _logger;
 
         // Define Minimum Password Age Policy
-        private readonly TimeSpan MinPasswordAge = TimeSpan.FromDays(1);
+        private readonly TimeSpan MinPasswordAge = TimeSpan.FromSeconds(1);
 
         public ChangePasswordModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AuthDbContext db, ILogger<ChangePasswordModel> logger)
         {
@@ -36,6 +36,22 @@ namespace BookwormOnline.Pages
 
         public async Task<IActionResult> OnGetAsync(bool forceChange = false)
         {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                _logger.LogWarning("User session invalid. Redirecting to Login page.");
+                return RedirectToPage("/Login");
+            }
+
+            string storedToken = HttpContext.Session.GetString("SessionToken");
+            if (string.IsNullOrEmpty(storedToken) || user.SessionToken != storedToken)
+            {
+                _logger.LogWarning($"Session token mismatch for user. Logging out.");
+                await _signInManager.SignOutAsync();
+                HttpContext.Session.Clear();
+                return RedirectToPage("/Login");
+            }
+
             if (forceChange)
             {
                 ModelState.AddModelError("", "Your password has expired. Please change it before continuing.");

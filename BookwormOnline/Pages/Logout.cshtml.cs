@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BookwormOnline.Pages
 {
-    [Authorize(Roles = "Admin,User")]
     public class LogoutModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;

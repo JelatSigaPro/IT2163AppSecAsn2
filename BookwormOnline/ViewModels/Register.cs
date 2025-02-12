@@ -43,8 +43,6 @@ public class Register
 
     [Required]
     [DataType(DataType.Password)]
-    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{12,}$",
-        ErrorMessage = "Password must be at least 12 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.")]
     [Compare(nameof(Password), ErrorMessage = "Password and confirmation password do not match.")]
     public string ConfirmPassword { get; set; }
 

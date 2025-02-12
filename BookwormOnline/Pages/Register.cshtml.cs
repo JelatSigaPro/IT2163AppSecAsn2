@@ -136,7 +136,7 @@ namespace BookwormOnline.Pages
                     PhotoPath = photoPath ?? null,
                     PasswordHash = hashedPassword, //Store hashed password
                     PasswordSalt = salt,           // Store generated salt
-                    PreviousPasswordHash1 = hashedPassword,
+                    PreviousPasswordHash1 = "",
                     PreviousPasswordHash2 = "",
                     LastPasswordChangeDate = DateTime.UtcNow,
                     SessionToken = sessionToken
@@ -145,8 +145,23 @@ namespace BookwormOnline.Pages
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
-                    HttpContext.Session.SetString("SessionToken", sessionToken);
+                    string role = user.Email.Equals("admin@example.com", StringComparison.OrdinalIgnoreCase) ? "Admin" : "User";
+
+                    // Ensure the role exists
+                    if (!await _roleManager.RoleExistsAsync(role))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(role));
+                    }
+
+                    // Assign the role to the user if not already assigned
+                    if (!await _userManager.IsInRoleAsync(user, role))
+                    {
+                        await _userManager.AddToRoleAsync(user, role);
+                    }
+
+                    // Sign in the user with the updated claims
                     await _signInManager.SignInAsync(user, isPersistent: false);
+
                     _logger.LogInformation("New user registered successfully.");
 
                     // Log successful registration
@@ -157,18 +172,6 @@ namespace BookwormOnline.Pages
                         Timestamp = DateTime.UtcNow
                     });
                     await _db.SaveChangesAsync();
-
-                    // Determine the role based on the email
-                    string role = RModel.Email.ToLower() == "admin@example.com" ? "Admin" : "User";
-
-                    // Ensure the role exists
-                    if (!await _roleManager.RoleExistsAsync(role))
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole(role));
-                    }
-
-                    // Assign the role to the user
-                    await _userManager.AddToRoleAsync(user, role);
 
                     return RedirectToPage("Index");
                 }
@@ -196,6 +199,7 @@ namespace BookwormOnline.Pages
                 return RedirectToPage("/Error/500");
             }
         }
+
 
         private string GenerateSessionToken()
         {
